@@ -1,0 +1,6 @@
+﻿Item/Step,1,2,3,4
+Step Name,Water-clean1,Water-clean2,Water-clean3,Air-blow
+Water,On,On,On,Off
+Air knife,Off,Off,Off,On
+Pin move,Down,Up/Down,Down,Down
+Time(Sec),150,150,150,150

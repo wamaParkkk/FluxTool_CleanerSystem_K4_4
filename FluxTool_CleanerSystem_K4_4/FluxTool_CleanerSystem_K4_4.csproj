@@ -1,0 +1,379 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8FD543E7-60EC-46AB-BD2B-00A24475D40C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>FluxTool_CleanerSystem_K4_4</RootNamespace>
+    <AssemblyName>FluxTool_CleanerSystem_K4_4</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Amkor_logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ajin_IO_driver">
+      <HintPath>..\..\Ajin_IO_driver\Ajin_IO_driver\bin\Release\Ajin_IO_driver.dll</HintPath>
+    </Reference>
+    <Reference Include="HanyoungNXClassLibrary">
+      <HintPath>..\..\HanyoungNXClassLibrary\HanyoungNXClassLibrary\bin\Release\HanyoungNXClassLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="MsSqlManagerLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\MsSqlManagerLibrary\MsSqlManagerLibrary\bin\Debug\MsSqlManagerLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AlarmForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlarmForm.Designer.cs">
+      <DependentUpon>AlarmForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnalogDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnalogDlg.designer.cs">
+      <DependentUpon>AnalogDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CK_ToggleBtn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ConfigureForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigureForm.Designer.cs">
+      <DependentUpon>ConfigureForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Define.cs" />
+    <Compile Include="DigitalDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DigitalDlg.designer.cs">
+      <DependentUpon>DigitalDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EventLogForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EventLogForm.designer.cs">
+      <DependentUpon>EventLogForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global.cs" />
+    <Compile Include="InterlockDisplayForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterlockDisplayForm.Designer.cs">
+      <DependentUpon>InterlockDisplayForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IOForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IOForm.Designer.cs">
+      <DependentUpon>IOForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KeyboardDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KeyboardDlg.designer.cs">
+      <DependentUpon>KeyboardDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaintnanceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaintnanceForm.Designer.cs">
+      <DependentUpon>MaintnanceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OperationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OperationForm.Designer.cs">
+      <DependentUpon>OperationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PM1Form.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PM1Form.Designer.cs">
+      <DependentUpon>PM1Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PM2Form.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PM2Form.designer.cs">
+      <DependentUpon>PM2Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PM3Form.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PM3Form.designer.cs">
+      <DependentUpon>PM3Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RecipeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecipeForm.Designer.cs">
+      <DependentUpon>RecipeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RecipeSelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecipeSelectForm.Designer.cs">
+      <DependentUpon>RecipeSelectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Squence\PM1Cylinder.cs" />
+    <Compile Include="Squence\PM1Process.cs" />
+    <Compile Include="Squence\PM2Cylinder.cs" />
+    <Compile Include="Squence\PM2Process.cs" />
+    <Compile Include="Squence\PM3Cylinder.cs" />
+    <Compile Include="Squence\PM3Process.cs" />
+    <Compile Include="Squence\WaterTankFill.cs" />
+    <Compile Include="Struct.cs" />
+    <Compile Include="ToolCheckInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ToolCheckInfoForm.Designer.cs">
+      <DependentUpon>ToolCheckInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToolHistoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ToolHistoryForm.Designer.cs">
+      <DependentUpon>ToolHistoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToolInfoRegistForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ToolInfoRegistForm.Designer.cs">
+      <DependentUpon>ToolInfoRegistForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserDataDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserDataDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UserRegistForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserRegistForm.designer.cs">
+      <DependentUpon>UserRegistForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WaterTankForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WaterTankForm.designer.cs">
+      <DependentUpon>WaterTankForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AlarmForm.resx">
+      <DependentUpon>AlarmForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnalogDlg.resx">
+      <DependentUpon>AnalogDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigureForm.resx">
+      <DependentUpon>ConfigureForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DigitalDlg.resx">
+      <DependentUpon>DigitalDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EventLogForm.resx">
+      <DependentUpon>EventLogForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterlockDisplayForm.resx">
+      <DependentUpon>InterlockDisplayForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IOForm.resx">
+      <DependentUpon>IOForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KeyboardDlg.resx">
+      <DependentUpon>KeyboardDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaintnanceForm.resx">
+      <DependentUpon>MaintnanceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OperationForm.resx">
+      <DependentUpon>OperationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PM1Form.resx">
+      <DependentUpon>PM1Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PM2Form.resx">
+      <DependentUpon>PM2Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PM3Form.resx">
+      <DependentUpon>PM3Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecipeForm.resx">
+      <DependentUpon>RecipeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecipeSelectForm.resx">
+      <DependentUpon>RecipeSelectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToolCheckInfoForm.resx">
+      <DependentUpon>ToolCheckInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToolHistoryForm.resx">
+      <DependentUpon>ToolHistoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToolInfoRegistForm.resx">
+      <DependentUpon>ToolInfoRegistForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserRegistForm.resx">
+      <DependentUpon>UserRegistForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WaterTankForm.resx">
+      <DependentUpon>WaterTankForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="UserDataDataSet.xsc">
+      <DependentUpon>UserDataDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="UserDataDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UserDataDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UserDataDataSet.xss">
+      <DependentUpon>UserDataDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Amkor_logo.ico" />
+    <None Include="images\Back.png" />
+    <None Include="images\register.png" />
+    <None Include="images\LogOut.png" />
+    <None Include="images\WaterTank.png" />
+    <None Include="images\Alarm1.png" />
+    <None Include="images\Alarm2.png" />
+    <None Include="images\log.png" />
+    <None Include="images\WaterFill.png" />
+    <None Include="images\Disable.png" />
+    <None Include="images\History.png" />
+    <Content Include="UserData.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="images\user.png" />
+    <None Include="images\loginGroup.png" />
+    <None Include="images\lock.png" />
+    <None Include="images\Chamber\Detect_Up.png" />
+    <None Include="images\Air3.png" />
+    <None Include="images\Air2.png" />
+    <None Include="images\Air4.png" />
+    <None Include="images\Air1.png" />
+    <None Include="images\Water4.png" />
+    <None Include="images\Water3.png" />
+    <None Include="images\Water2.png" />
+    <None Include="images\Water.png" />
+    <None Include="images\Chamber\Door_Close.png" />
+    <None Include="images\Chamber\Door_Open.png" />
+    <None Include="images\Operation.png" />
+    <None Include="images\Maint.png" />
+    <None Include="images\IOButton.png" />
+    <None Include="images\ConfigButton.png" />
+    <None Include="images\MainButton.png" />
+    <None Include="images\RecipeButton.png" />
+    <None Include="images\ExitButton.png" />
+    <None Include="images\AlarmButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="SerialComm\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
