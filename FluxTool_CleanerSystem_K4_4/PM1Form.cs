@@ -1,10 +1,8 @@
-﻿using MsSqlManagerLibrary;
-using System;
+﻿using System;
 using System.Drawing;
 using System.IO;
 using System.Reflection;
 using System.Text;
-using System.Threading.Tasks;
 using System.Timers;
 using System.Windows.Forms;
 using Timer = System.Timers.Timer;
