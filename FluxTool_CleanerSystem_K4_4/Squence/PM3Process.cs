@@ -713,8 +713,8 @@ namespace FluxTool_CleanerSystem_K4_4.Squence
                 {
                     F_PROCESS_ALL_VALVE_CLOSE();
 
-                    // Pin down set
-                    Global.SetDigValue((int)DigOutputList.CH3_Pin_UpDn_o, (uint)DigitalOffOn.Off, ModuleName);                    
+                    // Pin down set -> 25/05/21 Up으로 수정 요청
+                    Global.SetDigValue((int)DigOutputList.CH3_Pin_UpDn_o, (uint)DigitalOffOn.On, ModuleName);
 
                     F_INC_STEP();                    
                 }
